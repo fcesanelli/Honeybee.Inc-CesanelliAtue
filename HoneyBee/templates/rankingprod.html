@@ -1,0 +1,24 @@
+{% extends "base_ingresado.html" %}
+{% block title %}Ranking Productos{% endblock %}
+{% block page_content %}
+
+    <h1>Ranking productos más vendidos</h1><br>
+  
+    <table class="table" style=" text-align: center; margin: 0 auto">
+      <thead>
+        <tr>
+          <th>PRODUCTO</th>
+          <th>CANTIDAD</th>
+        </tr>  
+      </thead>
+      <tbody>
+        {% for key,value in rankpro.iterrows() %}
+        <tr>
+          <td>{{ value['PRODUCTO'] }}</td>
+          <td>{{ value['CANTIDAD'] }}</td>
+        </tr>  
+        {% endfor %}  
+      </tbody>  
+    </table>
+  
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base_ingresado.html" %}
+
+{% block title %}Bienvenido {% endblock %}
+
+{% block page_content %}
+<head>
+<style>
+body{
+    background: #0B0B3B
+}
+</style>
+</head>
+<p style="text-align: center;font-weight: Courier ;font-size: 50px;color:white">Hola {{name}}</p><br>
+<p style="text-align: center;font-weight: Courier ;font-size: 40px;color:white"> BIENVENIDO AL SISTEMA </p><br>
+ <table class="table table-bordered table-condensed" >
+            <thead>
+                <tr>
+                    <th style="font-size: 20px">RESULTADOS DE VALIDACIONES CSV</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr class = "center">
+                    <td>{{A}}</td>
+                </tr>
+                <tr class = "center">
+                    <td>{{B}}</td>
+                </tr>
+                <tr class = "center">
+                    <td>{{C}}</td>
+                </tr>
+                <tr class = "center">
+                    <td>{{D}}</td>
+                </tr>
+                <tr class = "center">
+                    <td>{{E}}</td>
+                </tr>
+            </tbody>
+        </table>
+<p style="text-align: center;font-weight: Courier ;font-size: 30px;color:white">ULTIMAS VENTAS REALIZADAS</p>
+<div> 
+    <div class="container-fluid">
+        <table class="table table-bordered table-condensed" >
+            <tbody>
+                {% for linea in  miListado %}
+                    <tr class="active">                
+                        {% for item in  linea %}
+                        <td >{{item}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+{% endblock %}

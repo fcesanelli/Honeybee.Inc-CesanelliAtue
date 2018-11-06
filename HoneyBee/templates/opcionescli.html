@@ -1,0 +1,27 @@
+{% extends "base_ingresado.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Clientes{% endblock %}
+
+{% block page_content %}
+<div>
+  <h1> {{ wtf.quick_form(form) }} </h1>
+  <h1>Si su consulta trae mas de un resultado</h1>
+  <h1>ingrese el cliente correcto de la lista.</h1><br>
+    <h1 class="header">RESULTADO DE BUSQUEDA</h1>
+  <div >
+    <table class="table" style=" text-align: center; margin: 0 auto">
+      <thead>
+        <tr>
+          <th>CLIENTES</th> 
+        </tr>  
+      </thead>
+      <tbody>
+        {% for l in D %}
+        <tr>
+          <td>{{ l }}</td>
+        </tr>
+        {% endfor %} 
+      </tbody>  
+    </table>
+  
+{% endblock %}

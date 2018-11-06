@@ -1,0 +1,33 @@
+body {
+    background: #0B0B3B;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+table{
+	background-color: white;
+}
+
+th {
+	text-align: center;
+}
+
+tr.center {
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+}
+
+.control-label{
+	color: white;
+}

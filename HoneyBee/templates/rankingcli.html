@@ -1,0 +1,24 @@
+{% extends "base_ingresado.html" %}
+{% block title %}Ranking Clientes{% endblock %}
+{% block page_content %}
+
+    <h1>Ranking mejores clientes</h1><br>
+  
+    <table class="table" style=" text-align: center; margin: 0 auto">
+      <thead>
+        <tr>
+          <th>CLIENTE</th>
+          <th>TOTAL GASTO</th>
+        </tr>  
+      </thead>
+      <tbody>
+        {% for key,value in rankcli.iterrows() %}
+        <tr>
+          <td>{{ value['CLIENTE'] }}</td>
+          <td>{{ value['GASTO'] }}</td>
+        </tr>  
+        {% endfor %}  
+      </tbody>  
+    </table>
+  
+{% endblock %}
